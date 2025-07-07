@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MapList" load_steps=2 format=3 uid="uid://b0r4osq14yuut"]
+
+[ext_resource type="Script" uid="uid://burhwy3uxc7wq" path="res://Scripts/Examples/Resources/map_list.gd" id="1_80pxd"]
+
+[resource]
+script = ExtResource("1_80pxd")
+locations = Dictionary[String, String]({
+"SoundTest": "uid://b1qxcqqyyvtev"
+})
+metadata/_custom_type_script = "uid://burhwy3uxc7wq"

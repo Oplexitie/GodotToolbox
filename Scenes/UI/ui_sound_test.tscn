@@ -1,0 +1,194 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5m5ygj4xug41"]
+
+[ext_resource type="Script" uid="uid://beodogfo7uefw" path="res://Scripts/Examples/sound_test.gd" id="1_7tl1h"]
+[ext_resource type="AudioStream" uid="uid://dmqq17l1jm7e1" path="res://Audio/SFX/bubble_shield.wav" id="2_kwksi"]
+[ext_resource type="AudioStream" uid="uid://sry36h2ct46m" path="res://Audio/SFX/ring.wav" id="3_5oio7"]
+[ext_resource type="AudioStream" uid="uid://cw5akq5es5ui3" path="res://Audio/SFX/spin.wav" id="4_33ywn"]
+[ext_resource type="AudioStream" uid="uid://bc4t3dh10bw7n" path="res://Audio/BGM/regular.ogg" id="5_mc2bf"]
+
+[node name="SoundTest" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Channels"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "SFX 1"
+script = ExtResource("1_7tl1h")
+audio_test = ExtResource("2_kwksi")
+
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "SFX 2"
+script = ExtResource("1_7tl1h")
+audio_test = ExtResource("3_5oio7")
+
+[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "SFX 3"
+script = ExtResource("1_7tl1h")
+audio_test = ExtResource("4_33ywn")
+
+[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "BGM"
+script = ExtResource("1_7tl1h")
+audio_test2 = ExtResource("5_mc2bf")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Channels NoCut"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "SFX 1"
+script = ExtResource("1_7tl1h")
+audio_test = ExtResource("2_kwksi")
+
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "SFX 2"
+script = ExtResource("1_7tl1h")
+audio_test = ExtResource("3_5oio7")
+
+[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "SFX 3"
+script = ExtResource("1_7tl1h")
+audio_test = ExtResource("4_33ywn")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Pool"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "SFX 1"
+script = ExtResource("1_7tl1h")
+audio_test = ExtResource("2_kwksi")
+
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "SFX 2"
+script = ExtResource("1_7tl1h")
+audio_test = ExtResource("3_5oio7")
+
+[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "SFX 3"
+script = ExtResource("1_7tl1h")
+audio_test = ExtResource("4_33ywn")
+
+[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "BGM"
+script = ExtResource("1_7tl1h")
+audio_test2 = ExtResource("5_mc2bf")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+script = ExtResource("1_7tl1h")
+
+[node name="Button4" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Fade out Channel BGM"
+
+[node name="Button3" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "Fade out Pool BGM"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 2
+script = ExtResource("1_7tl1h")
+
+[node name="Button" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+focus_mode = 0
+text = "Stop SFX"
+
+[node name="Button2" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+focus_mode = 0
+text = "Stop BGM"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="HBoxContainer/VBoxContainer/Button" method="_on_channel_sfx"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button2" to="HBoxContainer/VBoxContainer/Button2" method="_on_channel_sfx"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button3" to="HBoxContainer/VBoxContainer/Button3" method="_on_channel_sfx"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button4" to="HBoxContainer/VBoxContainer/Button4" method="_on_channel_track"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button" to="HBoxContainer/VBoxContainer3/Button" method="_on_channel_sfx_cut"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button2" to="HBoxContainer/VBoxContainer3/Button2" method="_on_channel_sfx_cut"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button3" to="HBoxContainer/VBoxContainer3/Button3" method="_on_channel_sfx_cut"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button" to="HBoxContainer/VBoxContainer2/Button" method="_on_pool_sfx"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button2" to="HBoxContainer/VBoxContainer2/Button2" method="_on_pool_sfx"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button3" to="HBoxContainer/VBoxContainer2/Button3" method="_on_pool_sfx"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button4" to="HBoxContainer/VBoxContainer2/Button4" method="_on_pool_track"]
+[connection signal="pressed" from="HBoxContainer2/Button4" to="HBoxContainer2" method="_on_fade_out_channel"]
+[connection signal="pressed" from="HBoxContainer2/Button3" to="HBoxContainer2" method="_on_fade_out_pool"]
+[connection signal="pressed" from="HBoxContainer3/Button" to="HBoxContainer3" method="_stop_sfx"]
+[connection signal="pressed" from="HBoxContainer3/Button2" to="HBoxContainer3" method="_stop_track"]

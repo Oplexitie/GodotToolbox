@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="GodotToolbox"
+run/main_scene="uid://cxkosgk7vq37a"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+AudioManager="*res://Scripts/Autoload/Audio/AudioPool/audio_manager.gd"
+AudioManager2="*res://Scripts/Autoload/Audio/AudioChannels/audio_manager.gd"
+SettingsFile="*res://Scripts/Autoload/DataFiles/Types/settings_file.gd"
+SaveFile="*res://Scripts/Autoload/DataFiles/Types/save_file.gd"
+EventBus="*res://Scripts/Autoload/event_bus.gd"
+ThreadLoad="*res://Scripts/Autoload/thread_load.gd"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
