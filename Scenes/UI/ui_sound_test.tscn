@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5m5ygj4xug41"]
+[gd_scene load_steps=7 format=3 uid="uid://c5m5ygj4xug41"]
 
+[ext_resource type="Script" uid="uid://cehnmira3e4bj" path="res://Scripts/Examples/save_test.gd" id="1_2ckri"]
 [ext_resource type="Script" uid="uid://beodogfo7uefw" path="res://Scripts/Examples/sound_test.gd" id="1_7tl1h"]
 [ext_resource type="AudioStream" uid="uid://dmqq17l1jm7e1" path="res://Audio/SFX/bubble_shield.wav" id="2_kwksi"]
 [ext_resource type="AudioStream" uid="uid://sry36h2ct46m" path="res://Audio/SFX/ring.wav" id="3_5oio7"]
@@ -19,6 +20,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
+script = ExtResource("1_2ckri")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(500, 200)

@@ -2,24 +2,25 @@ extends FileData
 
 const SETTINGS_PATH: String = "res://settings.cfg"
 
-func save_file() -> void:
+func save_file() -> int:
 	var file: ConfigFile = ConfigFile.new()
 	for section in file_data.keys():
 		for key in file_data[section]:
 			file.set_value(section,key,file_data[section][key])
-	file.save(SETTINGS_PATH)
+	
+	return file.save(SETTINGS_PATH)
 
-func load_file() -> void:
-	if has_file(SETTINGS_PATH):
-		var file: ConfigFile = ConfigFile.new()
-		var err: Error = file.load(SETTINGS_PATH)
-		
-		if err != OK:
-			printerr("An issue has been encountered -> Config Error: {0}".format([err]))
-			return
-		
-		for section in file_data.keys():
-			for key in file_data[section]:
-				file_data[section][key] = file.get_value(section,key)
-	else:
-		printerr("No config file available")
+func load_file() -> int:
+	if not has_file(SETTINGS_PATH):
+		return ERR_FILE_NOT_FOUND
+	
+	var file: ConfigFile = ConfigFile.new()
+	var err: Error = file.load(SETTINGS_PATH)
+	if err: return err
+	
+	for section in file.get_sections():
+		for data in file.get_section_keys(section):
+			var loaded_data: Dictionary = { data: file.get_value(section,data) }
+			set_element(section, loaded_data)
+	
+	return OK
