@@ -3,11 +3,11 @@ class_name StateMachine
 
 @export var initial_state: String = "Regular"
 
-@onready var pawn: Pawn = get_parent()
-
 var states: Dictionary[String, Node2D]
 var current_state: String
 var last_state: String
+
+@onready var pawn: Node2D = get_parent()
 
 func initialize() -> void:
 	initialize_states()
