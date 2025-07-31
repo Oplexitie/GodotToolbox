@@ -1,14 +1,14 @@
-extends Node2D
-class_name PawnState
+extends Node
+class_name State
 
-func enter(_pawn: Pawn) -> void:
+func enter(_parent: Node) -> void:
 	pass
 	
-func exit(_pawn: Pawn) -> void:
+func exit(_parent: Node) -> void:
 	pass
 
-func step(_pawn: Pawn, _delta: float) -> void:
+func step(_parent: Node, _delta: float) -> void:
 	pass
 
-func animate(_pawn: Pawn, _delta: float) -> void:
+func animate(_parent: Node, _delta: float) -> void:
 	pass

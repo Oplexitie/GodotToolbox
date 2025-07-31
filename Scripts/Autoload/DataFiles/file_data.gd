@@ -1,7 +1,7 @@
-extends Node2D
+extends Node
 class_name FileData
 
-var file_data: Dictionary
+var file_data: Dictionary[String,Dictionary]
 
 func _ready() -> void:
 	load_file()

@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 @export var map: String
 @export var viewport_path: NodePath

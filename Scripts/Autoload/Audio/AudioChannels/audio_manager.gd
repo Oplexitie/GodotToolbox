@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 var audio_music: ChannelBGM = ChannelBGM.new("Music", 1)
 var audio_sfx: ChannelSFX = ChannelSFX.new("SFX", 4)

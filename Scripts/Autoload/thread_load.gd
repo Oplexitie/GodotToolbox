@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 var viewport: SubViewport
 var ui_layer: CanvasLayer

@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxkosgk7vq37a"]
+[gd_scene load_steps=2 format=3 uid="uid://d1yqj053a3pvh"]
 
 [ext_resource type="Script" uid="uid://dxybxsa27ujes" path="res://Scripts/game.gd" id="1_ebmjs"]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node"]
 script = ExtResource("1_ebmjs")
 map = "SoundTest"
 viewport_path = NodePath("Viewport_Layer/SubViewportContainer/SubViewport")
