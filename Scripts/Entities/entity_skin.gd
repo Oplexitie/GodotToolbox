@@ -1,5 +1,5 @@
 extends Sprite2D
-class_name PawnSkin
+class_name EntitySkin
 
 @export var animation_states: Dictionary[String,int]
 

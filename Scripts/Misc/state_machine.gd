@@ -14,8 +14,8 @@ func initialize() -> void:
 	change_state(initial_state)
 
 func initialize_states() -> void:
-	for i in get_children():
-		states[i.name] = i
+	for state in get_children():
+		states[state.name] = state
 
 func change_state(to: String) -> void:
 	if current_state:
