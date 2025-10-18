@@ -1,5 +1,6 @@
-extends Node
+@abstract
 class_name FileData
+extends Node
 
 var file_data: Dictionary[String,Dictionary]
 

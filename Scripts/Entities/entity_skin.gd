@@ -1,13 +1,11 @@
-extends Sprite2D
 class_name EntitySkin
+extends Sprite2D
 
-@export var animation_states: Dictionary[String,int]
-
-var current_state: int
+var current_state: String
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 
-func set_animation_state(state: int) -> void:
+func set_animation_state(state: String) -> void:
 	if state != current_state:
 		current_state = state
 		animation_tree.set("parameters/Transition/transition_request", current_state)

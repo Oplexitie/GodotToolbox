@@ -1,5 +1,6 @@
-extends Node
+@abstract
 class_name AudioPool
+extends Node
 
 var audio_players: Array[AudioStreamPlayer] = []
 

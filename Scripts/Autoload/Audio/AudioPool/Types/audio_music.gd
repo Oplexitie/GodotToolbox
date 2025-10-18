@@ -1,5 +1,5 @@
-extends AudioPool
 class_name PoolBGM
+extends AudioPool
 
 var tween: Tween
 

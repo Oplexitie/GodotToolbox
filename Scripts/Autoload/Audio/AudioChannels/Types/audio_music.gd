@@ -1,5 +1,5 @@
-extends AudioChannels
 class_name ChannelBGM
+extends AudioChannels
 
 var tween: Tween
 

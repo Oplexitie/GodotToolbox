@@ -1,5 +1,5 @@
-extends AudioPool
 class_name PoolSFX
+extends AudioPool
 
 # Used to play sound effects
 func play(resource: AudioStreamWAV, volume: float) -> void:

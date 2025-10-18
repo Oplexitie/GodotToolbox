@@ -1,5 +1,6 @@
-extends Node
+@abstract
 class_name State
+extends Node
 
 func enter(_parent: Node) -> void:
 	pass

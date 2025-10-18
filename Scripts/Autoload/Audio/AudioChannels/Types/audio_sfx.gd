@@ -1,5 +1,5 @@
-extends AudioChannels
 class_name ChannelSFX
+extends AudioChannels
 
 # Used to play sound effects
 func play(resource: AudioStreamWAV, id: int, volume: float, override: bool) -> void:

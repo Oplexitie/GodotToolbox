@@ -1,5 +1,5 @@
-extends Node2D
 class_name SceneSetup
+extends Node2D
 
 @export var ui_pack: PackedScene
 
