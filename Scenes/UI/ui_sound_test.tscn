@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5m5ygj4xug41"]
+[gd_scene format=3 uid="uid://c5m5ygj4xug41"]
 
 [ext_resource type="Script" uid="uid://cehnmira3e4bj" path="res://Scripts/Examples/save_test.gd" id="1_2ckri"]
 [ext_resource type="Script" uid="uid://beodogfo7uefw" path="res://Scripts/Examples/sound_test.gd" id="1_7tl1h"]
@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cw5akq5es5ui3" path="res://Audio/SFX/spin.wav" id="4_33ywn"]
 [ext_resource type="AudioStream" uid="uid://bc4t3dh10bw7n" path="res://Audio/BGM/regular.ogg" id="5_mc2bf"]
 
-[node name="SoundTest" type="VBoxContainer"]
+[node name="SoundTest" type="VBoxContainer" unique_id=440784874]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -22,22 +22,22 @@ grow_vertical = 2
 theme_override_constants/separation = 10
 script = ExtResource("1_2ckri")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1171054318]
 custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=293269588]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=838285871]
 layout_mode = 2
 text = "Channels"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=216193663]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -45,7 +45,7 @@ text = "SFX 1"
 script = ExtResource("1_7tl1h")
 audio_test = ExtResource("2_kwksi")
 
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=421905145]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -53,7 +53,7 @@ text = "SFX 2"
 script = ExtResource("1_7tl1h")
 audio_test = ExtResource("3_5oio7")
 
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=2124371940]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -61,7 +61,7 @@ text = "SFX 3"
 script = ExtResource("1_7tl1h")
 audio_test = ExtResource("4_33ywn")
 
-[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=137255904]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -69,16 +69,16 @@ text = "BGM"
 script = ExtResource("1_7tl1h")
 audio_test2 = ExtResource("5_mc2bf")
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer" unique_id=1375771607]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer3"]
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer3" unique_id=634715140]
 layout_mode = 2
 text = "Channels NoCut"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer3"]
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer3" unique_id=2055645592]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -86,7 +86,7 @@ text = "SFX 1"
 script = ExtResource("1_7tl1h")
 audio_test = ExtResource("2_kwksi")
 
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer3"]
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer3" unique_id=1037677828]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -94,7 +94,7 @@ text = "SFX 2"
 script = ExtResource("1_7tl1h")
 audio_test = ExtResource("3_5oio7")
 
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer3"]
+[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer3" unique_id=1721659235]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -102,16 +102,16 @@ text = "SFX 3"
 script = ExtResource("1_7tl1h")
 audio_test = ExtResource("4_33ywn")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=106016467]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=207247754]
 layout_mode = 2
 text = "Pool"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=1189717719]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -119,7 +119,7 @@ text = "SFX 1"
 script = ExtResource("1_7tl1h")
 audio_test = ExtResource("2_kwksi")
 
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=621621670]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -127,7 +127,7 @@ text = "SFX 2"
 script = ExtResource("1_7tl1h")
 audio_test = ExtResource("3_5oio7")
 
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=1346115835]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -135,7 +135,7 @@ text = "SFX 3"
 script = ExtResource("1_7tl1h")
 audio_test = ExtResource("4_33ywn")
 
-[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=541712187]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
@@ -143,38 +143,38 @@ text = "BGM"
 script = ExtResource("1_7tl1h")
 audio_test2 = ExtResource("5_mc2bf")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1831342531]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 script = ExtResource("1_7tl1h")
 
-[node name="Button4" type="Button" parent="HBoxContainer2"]
+[node name="Button4" type="Button" parent="HBoxContainer2" unique_id=876785842]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 text = "Fade out Channel BGM"
 
-[node name="Button3" type="Button" parent="HBoxContainer2"]
+[node name="Button3" type="Button" parent="HBoxContainer2" unique_id=594483635]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
 text = "Fade out Pool BGM"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+[node name="HBoxContainer3" type="HBoxContainer" parent="." unique_id=1949750891]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 2
 script = ExtResource("1_7tl1h")
 
-[node name="Button" type="Button" parent="HBoxContainer3"]
+[node name="Button" type="Button" parent="HBoxContainer3" unique_id=26797659]
 layout_mode = 2
 focus_mode = 0
 text = "Stop SFX"
 
-[node name="Button2" type="Button" parent="HBoxContainer3"]
+[node name="Button2" type="Button" parent="HBoxContainer3" unique_id=944544163]
 layout_mode = 2
 focus_mode = 0
 text = "Stop BGM"
