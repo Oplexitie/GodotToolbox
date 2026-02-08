@@ -11,9 +11,6 @@ func save_file() -> int:
 	return file.get_error()
 
 func load_file() -> int:
-	if not has_file(SAVE_PATH):
-		return ERR_FILE_NOT_FOUND
-	
 	var file: FileAccess = FileAccess.open_encrypted_with_pass(SAVE_PATH, FileAccess.READ, ENCRYPT_KEY)
 	if not file: return FileAccess.get_open_error()
 	

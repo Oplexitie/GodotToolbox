@@ -11,9 +11,6 @@ func save_file() -> int:
 	return file.save(SETTINGS_PATH)
 
 func load_file() -> int:
-	if not has_file(SETTINGS_PATH):
-		return ERR_FILE_NOT_FOUND
-	
 	var file: ConfigFile = ConfigFile.new()
 	var err: Error = file.load(SETTINGS_PATH)
 	if err: return err

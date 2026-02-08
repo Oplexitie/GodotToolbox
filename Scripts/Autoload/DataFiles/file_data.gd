@@ -4,12 +4,6 @@ extends Node
 
 var file_data: Dictionary[String,Dictionary]
 
-func _ready() -> void:
-	load_file()
-
-func has_file(file_path: String) -> bool:
-	return FileAccess.file_exists(file_path)
-
 func has_element(element: String) -> bool:
 	return file_data.has(element)
 

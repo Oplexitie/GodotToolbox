@@ -5,10 +5,8 @@ extends VBoxContainer
 
 func _ready() -> void:
 	_save_data()
-	_load_data(SaveFile.load_file())
-	_load_data(SettingsFile.load_file())
-	_print_data(SaveFile.file_data)
-	_print_data(SettingsFile.file_data)
+	_load_data(SaveFile)
+	_load_data(SettingsFile)
 
 func _save_data() -> void:
 	if not is_saving: return
@@ -23,11 +21,11 @@ func _save_data() -> void:
 	SaveFile.save_file()
 	SettingsFile.save_file()
 
-func _load_data(load_error: int) -> void:
+func _load_data(data_type: FileData) -> void:
 	if not is_loading: return
 	
-	if load_error != OK:
-		printerr("An issue has been encountered -> Error: ", load_error)
-
-func _print_data(data: Dictionary) -> void:
-	if is_loading: print(data)
+	var load_status: int = data_type.load_file()
+	if load_status == OK:
+		print(data_type.file_data)
+	else:
+		printerr("An issue has been encountered -> Error: ", load_status)
