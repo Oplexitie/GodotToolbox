@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://c5m5ygj4xug41"]
 
-[ext_resource type="Script" uid="uid://cehnmira3e4bj" path="res://Scripts/Examples/save_test.gd" id="1_2ckri"]
 [ext_resource type="Script" uid="uid://beodogfo7uefw" path="res://Scripts/Examples/sound_test.gd" id="1_7tl1h"]
 [ext_resource type="AudioStream" uid="uid://dmqq17l1jm7e1" path="res://Audio/SFX/bubble_shield.wav" id="2_kwksi"]
 [ext_resource type="AudioStream" uid="uid://sry36h2ct46m" path="res://Audio/SFX/ring.wav" id="3_5oio7"]
@@ -20,7 +19,15 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
-script = ExtResource("1_2ckri")
+script = ExtResource("1_7tl1h")
+sfx_list = Dictionary[String, AudioStreamWAV]({
+"Bubble": ExtResource("2_kwksi"),
+"Ring": ExtResource("3_5oio7"),
+"Spin": ExtResource("4_33ywn")
+})
+bgm_list = Dictionary[String, AudioStreamOggVorbis]({
+"Regular": ExtResource("5_mc2bf")
+})
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1171054318]
 custom_minimum_size = Vector2(500, 200)
@@ -42,32 +49,24 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "SFX 1"
-script = ExtResource("1_7tl1h")
-audio_test = ExtResource("2_kwksi")
 
 [node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=421905145]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "SFX 2"
-script = ExtResource("1_7tl1h")
-audio_test = ExtResource("3_5oio7")
 
 [node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=2124371940]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "SFX 3"
-script = ExtResource("1_7tl1h")
-audio_test = ExtResource("4_33ywn")
 
 [node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=137255904]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "BGM"
-script = ExtResource("1_7tl1h")
-audio_test2 = ExtResource("5_mc2bf")
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer" unique_id=1375771607]
 layout_mode = 2
@@ -83,24 +82,18 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "SFX 1"
-script = ExtResource("1_7tl1h")
-audio_test = ExtResource("2_kwksi")
 
 [node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer3" unique_id=1037677828]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "SFX 2"
-script = ExtResource("1_7tl1h")
-audio_test = ExtResource("3_5oio7")
 
 [node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer3" unique_id=1721659235]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "SFX 3"
-script = ExtResource("1_7tl1h")
-audio_test = ExtResource("4_33ywn")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=106016467]
 layout_mode = 2
@@ -116,39 +109,30 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "SFX 1"
-script = ExtResource("1_7tl1h")
-audio_test = ExtResource("2_kwksi")
 
 [node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=621621670]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "SFX 2"
-script = ExtResource("1_7tl1h")
-audio_test = ExtResource("3_5oio7")
 
 [node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=1346115835]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "SFX 3"
-script = ExtResource("1_7tl1h")
-audio_test = ExtResource("4_33ywn")
 
 [node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer2" unique_id=541712187]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 text = "BGM"
-script = ExtResource("1_7tl1h")
-audio_test2 = ExtResource("5_mc2bf")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1831342531]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
-script = ExtResource("1_7tl1h")
 
 [node name="Button4" type="Button" parent="HBoxContainer2" unique_id=876785842]
 layout_mode = 2
@@ -167,7 +151,6 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 2
-script = ExtResource("1_7tl1h")
 
 [node name="Button" type="Button" parent="HBoxContainer3" unique_id=26797659]
 layout_mode = 2
@@ -179,18 +162,18 @@ layout_mode = 2
 focus_mode = 0
 text = "Stop BGM"
 
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="HBoxContainer/VBoxContainer/Button" method="_on_channel_sfx"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button2" to="HBoxContainer/VBoxContainer/Button2" method="_on_channel_sfx"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button3" to="HBoxContainer/VBoxContainer/Button3" method="_on_channel_sfx"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button4" to="HBoxContainer/VBoxContainer/Button4" method="_on_channel_track"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button" to="HBoxContainer/VBoxContainer3/Button" method="_on_channel_sfx_cut"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button2" to="HBoxContainer/VBoxContainer3/Button2" method="_on_channel_sfx_cut"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button3" to="HBoxContainer/VBoxContainer3/Button3" method="_on_channel_sfx_cut"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button" to="HBoxContainer/VBoxContainer2/Button" method="_on_pool_sfx"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button2" to="HBoxContainer/VBoxContainer2/Button2" method="_on_pool_sfx"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button3" to="HBoxContainer/VBoxContainer2/Button3" method="_on_pool_sfx"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button4" to="HBoxContainer/VBoxContainer2/Button4" method="_on_pool_track"]
-[connection signal="pressed" from="HBoxContainer2/Button4" to="HBoxContainer2" method="_on_fade_out_channel"]
-[connection signal="pressed" from="HBoxContainer2/Button3" to="HBoxContainer2" method="_on_fade_out_pool"]
-[connection signal="pressed" from="HBoxContainer3/Button" to="HBoxContainer3" method="_stop_sfx"]
-[connection signal="pressed" from="HBoxContainer3/Button2" to="HBoxContainer3" method="_stop_track"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_channel_sfx" binds= ["Bubble"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button2" to="." method="_on_channel_sfx" binds= ["Ring"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button3" to="." method="_on_channel_sfx" binds= ["Spin"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button4" to="." method="_on_channel_bgm" binds= ["Regular"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button" to="." method="_on_channel_sfx" binds= ["Bubble", false]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button2" to="." method="_on_channel_sfx" binds= ["Ring", false]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Button3" to="." method="_on_channel_sfx" binds= ["Spin", false]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button" to="." method="_on_pool_sfx" binds= ["Bubble"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button2" to="." method="_on_pool_sfx" binds= ["Ring"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button3" to="." method="_on_pool_sfx" binds= ["Spin"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Button4" to="." method="_on_pool_bgm" binds= ["Regular"]]
+[connection signal="pressed" from="HBoxContainer2/Button4" to="." method="_on_fade_out_channel"]
+[connection signal="pressed" from="HBoxContainer2/Button3" to="." method="_on_fade_out_pool"]
+[connection signal="pressed" from="HBoxContainer3/Button" to="." method="_stop_sfx"]
+[connection signal="pressed" from="HBoxContainer3/Button2" to="." method="_stop_track"]

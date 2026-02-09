@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AudioManager="*res://Scripts/Autoload/Audio/AudioPool/audio_manager.gd"
-AudioManager2="*res://Scripts/Autoload/Audio/AudioChannels/audio_manager.gd"
+AudioPoolManager="*res://Scripts/Autoload/Audio/AudioPool/audio_manager.gd"
+AudioChannelManager="*res://Scripts/Autoload/Audio/AudioChannels/audio_manager.gd"
 SettingsFile="*res://Scripts/Autoload/DataFiles/Types/settings_file.gd"
 SaveFile="*res://Scripts/Autoload/DataFiles/Types/save_file.gd"
 EventBus="*res://Scripts/Autoload/event_bus.gd"

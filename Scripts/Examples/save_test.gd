@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends Node
 
 @export var is_saving: bool
 @export var is_loading: bool

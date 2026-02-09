@@ -2,12 +2,11 @@
 
 [ext_resource type="Script" uid="uid://chd5tw7tmh2sc" path="res://Scripts/Examples/setup_example.gd" id="1_c23fj"]
 [ext_resource type="PackedScene" uid="uid://c5m5ygj4xug41" path="res://Scenes/UI/ui_sound_test.tscn" id="2_g08ty"]
-[ext_resource type="Texture2D" uid="uid://b7lke8ma5l3u2" path="res://icon.svg" id="3_4odsf"]
+[ext_resource type="Script" uid="uid://cehnmira3e4bj" path="res://Scripts/Examples/save_test.gd" id="3_4odsf"]
 
 [node name="SoundTest" type="Node" unique_id=418510391]
 script = ExtResource("1_c23fj")
 ui_pack = ExtResource("2_g08ty")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=654976647]
-position = Vector2(146, 121)
-texture = ExtResource("3_4odsf")
+[node name="SaveTest" type="Node" parent="." unique_id=1455511979]
+script = ExtResource("3_4odsf")
